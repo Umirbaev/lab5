@@ -184,8 +184,8 @@ class target():
         # x = self.x = rnd(600, 780)
         # y = self.y = rnd(300, 500)
         # r = self.r = rnd(10, 40)
-        self.vx = rnd(1, 2)
-        self.vy = rnd(1, 2)
+        self.vx = rnd(-2, 2)
+        self.vy = rnd(-2, 2)
         self.points = 1
         self.live = 5 + rnd(5)
         self.change_color = 0
@@ -199,8 +199,8 @@ class target():
         x = self.x = rnd(600, 780)
         y = self.y = rnd(300, 500)
         r = self.r = rnd(10, 40)
-        self.vx = rnd(1, 2)
-        self.vy = rnd(1, 2)
+        self.vx = rnd(-2, 2)
+        self.vy = rnd(-2, 2)
         color=self.color = '#B40431'
         canv.coords(self.id, x - r, y - r, x + r, y + r)
         canv.coords(self.id_live, x, y)
