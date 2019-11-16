@@ -247,10 +247,8 @@ class target():
             self.an = math.atan(self.vy / self.vx)
         except BaseException:
             self.an=math.atan(self.vy)
-
         if self.x == w.x:
             self.x += 1
-
         if w.x - (self.x + self.vx):
             an_rad = math.atan((w.y - (self.y + self.vy)) / (w.x - (self.x + self.vx)))
             an_res = an_rad - (self.an - an_rad)
@@ -305,9 +303,9 @@ while True:
                 if b.hittest(w):
                     b.ricochet(w)
             for t in targets:
-                t.movet()
-                if t.hittest(w):
-                    t.ricochett(w)
+                for w in walls:
+                    if t.hittest(w):
+                        t.ricochett(w)
                 if t.live:
                     t.movet()
                 if b.hittest(t):
